@@ -18,6 +18,7 @@ userRouter.post("/register", (request, response) => {
     //TODO: check if this username is availabe in the db
     //if it is then insert the new user into the db
     //else username is not available then redirect to the registerError.ejs page
+    response.status(200).send({ username: username, password: password });
   } else {
     response.redirect("/register");
   }
